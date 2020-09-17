@@ -1,0 +1,204 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/black"
+    tools:context=".AnalyticActivity">
+
+    <android.support.constraint.ConstraintLayout
+        android:id="@+id/constraintLayout15"
+        android:layout_width="0dp"
+        android:layout_height="45dp"
+        android:background="@color/tabsBar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/img_home"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="8dp"
+            android:background="@drawable/transparent_button"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/ic_home_white_24dp" />
+
+        <TextView
+            android:id="@+id/title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="8dp"
+            android:fontFamily="@font/merriweather_regular"
+            android:text="GPS Analysis"
+            android:textColor="@color/White"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    </android.support.constraint.ConstraintLayout>
+
+    <ListView
+        android:id="@+id/list_coordinates"
+        android:layout_width="125dp"
+        android:layout_height="0dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="8dp"
+        android:background="@drawable/a_constraint_white_background"
+        android:stackFromBottom="true"
+        android:transcriptMode="alwaysScroll"
+        app:layout_constraintBottom_toTopOf="@+id/constraintLayout16"
+        app:layout_constraintEnd_toStartOf="@+id/list_distances"
+        app:layout_constraintTop_toBottomOf="@+id/txt_coordinates_count" />
+
+    <ListView
+        android:id="@+id/list_distances"
+        android:layout_width="70dp"
+        android:layout_height="0dp"
+        android:layout_marginEnd="8dp"
+        android:background="@drawable/a_constraint_white_background"
+        android:stackFromBottom="true"
+        android:transcriptMode="alwaysScroll"
+        app:layout_constraintBottom_toBottomOf="@+id/list_coordinates"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/list_coordinates" />
+
+    <Button
+        android:id="@+id/btn_start_gps"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="8dp"
+        android:background="@drawable/custom_click_save"
+        android:text="Start"
+        android:textColor="@color/White"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toStartOf="@+id/list_coordinates"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/constraintLayout15" />
+
+    <Button
+        android:id="@+id/btn_stop_gps"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="8dp"
+        android:background="@drawable/custom_button_click_2"
+        android:text="Capture"
+        android:textColor="@color/White"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toStartOf="@+id/list_coordinates"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btn_start_gps" />
+
+    <TextView
+        android:id="@+id/txt_coordinates_count"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="00"
+        android:textColor="@color/White"
+        app:layout_constraintEnd_toEndOf="@+id/list_coordinates"
+        app:layout_constraintStart_toStartOf="@+id/list_coordinates"
+        app:layout_constraintTop_toBottomOf="@+id/constraintLayout15" />
+
+    <TextView
+        android:id="@+id/txt_distance_count"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="00"
+        android:textAlignment="center"
+        android:textColor="@color/White"
+        app:layout_constraintBottom_toTopOf="@+id/list_distances"
+        app:layout_constraintEnd_toEndOf="@+id/list_distances"
+        app:layout_constraintStart_toStartOf="@+id/list_distances" />
+
+    <android.support.constraint.ConstraintLayout
+        android:id="@+id/constraintLayout16"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="16dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btn_reset_gps">
+
+        <fragment
+            android:id="@+id/map2"
+            android:name="com.google.android.gms.maps.SupportMapFragment"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginStart="4dp"
+            android:layout_marginEnd="4dp"
+            android:layout_marginBottom="4dp"
+            app:cameraZoom="18"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    </android.support.constraint.ConstraintLayout>
+
+    <Button
+        android:id="@+id/btn_reset_gps"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:background="@drawable/custom_button_click_2"
+        android:text="STOP"
+        android:textColor="@color/White"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="@+id/btn_stop_gps"
+        app:layout_constraintStart_toStartOf="@+id/btn_stop_gps"
+        app:layout_constraintTop_toBottomOf="@+id/btn_stop_gps" />
+
+    <View
+        android:id="@+id/divider17"
+        android:layout_width="1dp"
+        android:layout_height="1dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        android:background="?android:attr/listDivider"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/constraintLayout16" />
+
+    <TextView
+        android:id="@+id/txt_longitude_gps"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/a_constraint_white_background"
+        android:padding="8dp"
+        android:text="0.0000"
+        android:textColor="@color/colourFive"
+        app:layout_constraintBottom_toBottomOf="@+id/txt_coordinates_gps"
+        app:layout_constraintStart_toEndOf="@+id/divider17"
+        app:layout_constraintTop_toTopOf="@+id/txt_coordinates_gps" />
+
+    <TextView
+        android:id="@+id/txt_coordinates_gps"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="@drawable/a_constraint_white_background"
+        android:padding="8dp"
+        android:text="0.0000"
+        android:textAlignment="center"
+        android:textColor="@color/colourFive"
+        app:layout_constraintEnd_toStartOf="@+id/divider17"
+        app:layout_constraintTop_toTopOf="@+id/constraintLayout16" />
+</android.support.constraint.ConstraintLayout>

@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".TestActivity">
+
+    <EditText
+        android:id="@+id/edt_name_test"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="124dp"
+        android:layout_marginEnd="8dp"
+        android:background="@drawable/a_edit_text_background"
+        android:ems="10"
+        android:hint="Enter Name"
+        android:inputType="textPersonName"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.431"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/edt_address_test"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:background="@drawable/a_edit_text_background"
+        android:ems="10"
+        android:hint="Enter Address"
+        android:inputType="textPersonName"
+        app:layout_constraintEnd_toEndOf="@+id/edt_name_test"
+        app:layout_constraintStart_toStartOf="@+id/edt_name_test"
+        app:layout_constraintTop_toBottomOf="@+id/edt_name_test" />
+
+    <Button
+        android:id="@+id/btn_add_test"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:background="@drawable/custom_button_click_2"
+        android:text="Add"
+        android:textColor="@color/White"
+        app:layout_constraintEnd_toEndOf="@+id/edt_address_test"
+        app:layout_constraintStart_toStartOf="@+id/edt_address_test"
+        app:layout_constraintTop_toBottomOf="@+id/edt_address_test" />
+</android.support.constraint.ConstraintLayout>

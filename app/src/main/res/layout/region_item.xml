@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/txt_region_name_item"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:text="Region Name"
+        android:textColor="@color/tabsBar"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <View
+        android:id="@+id/divider12"
+        android:layout_width="200dp"
+        android:layout_height="1dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:background="@color/workGreen"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txt_end_time_region_item" />
+
+    <TextView
+        android:id="@+id/textView28"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:text="S/T"
+        android:textSize="12sp"
+        app:layout_constraintEnd_toStartOf="@+id/txt_start_time_region_item"
+        app:layout_constraintTop_toBottomOf="@+id/txt_region_name_item" />
+
+    <TextView
+        android:id="@+id/txt_start_time_region_item"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="24dp"
+        android:text="00:00:00"
+        android:textColor="@color/tabsBar"
+        android:textSize="12sp"
+        app:layout_constraintBottom_toBottomOf="@+id/textView28"
+        app:layout_constraintEnd_toStartOf="@+id/textView38"
+        app:layout_constraintTop_toTopOf="@+id/textView28" />
+
+    <TextView
+        android:id="@+id/textView38"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:text="E/T:"
+        android:textSize="12sp"
+        app:layout_constraintBottom_toBottomOf="@+id/txt_start_time_region_item"
+        app:layout_constraintEnd_toStartOf="@+id/txt_end_time_region_item"
+        app:layout_constraintTop_toTopOf="@+id/txt_start_time_region_item" />
+
+    <TextView
+        android:id="@+id/txt_end_time_region_item"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:text="00:00:00"
+        android:textColor="@color/tabsBar"
+        android:textSize="12sp"
+        app:layout_constraintBottom_toBottomOf="@+id/textView38"
+        app:layout_constraintEnd_toEndOf="@+id/divider15"
+        app:layout_constraintStart_toEndOf="@+id/divider15"
+        app:layout_constraintTop_toTopOf="@+id/textView38" />
+
+    <TextView
+        android:id="@+id/textView54"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:text="Radius:"
+        android:textSize="12sp"
+        app:layout_constraintBottom_toBottomOf="@+id/txt_end_time_region_item"
+        app:layout_constraintStart_toEndOf="@+id/txt_end_time_region_item"
+        app:layout_constraintTop_toTopOf="@+id/txt_end_time_region_item" />
+
+    <TextView
+        android:id="@+id/txt_radius_region_item"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:text="000"
+        android:textColor="@color/tabsBar"
+        android:textSize="12sp"
+        app:layout_constraintBottom_toBottomOf="@+id/textView54"
+        app:layout_constraintStart_toEndOf="@+id/textView54"
+        app:layout_constraintTop_toTopOf="@+id/textView54" />
+
+    <View
+        android:id="@+id/divider15"
+        android:layout_width="1dp"
+        android:layout_height="10dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        android:background="?android:attr/listDivider"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txt_region_name_item" />
+
+    <TextView
+        android:id="@+id/txt_region_status_region_item"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/a_button_background_unpressed"
+        android:text="A"
+        android:visibility="gone"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/txt_county_region_item"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:text="County"
+        android:visibility="gone"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+</android.support.constraint.ConstraintLayout>
